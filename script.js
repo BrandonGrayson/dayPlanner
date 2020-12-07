@@ -3,6 +3,10 @@ $(document).ready(function () {
 let nineamTextArea = document.querySelector('#nineamTextArea')
 let saveTextBtns = document.querySelectorAll('.saveTextBtn')
 // $('#nineamTextArea')
+    // set current Hour to a variable
+    var curentHour = moment().hours()
+    // create a current day var with a text value
+    $('#currentDay').text(moment().format('dddd, MMMM do YYYY'))
 
 // grab any value that maybe in local storage
 $('#9 .description').val(localStorage.getItem(9))
@@ -32,9 +36,6 @@ $('#5 .description').val(localStorage.getItem(5))
 //}
 
 
-
-
-
 // access the text area value and save it to a variable
 // nineamTextArea.value = userText
 
@@ -53,3 +54,14 @@ $('#5 .description').val(localStorage.getItem(5))
 // let userText = JSON.parse(localStorage.getItem('userText'))
 
 })
+
+ // take in the text area for each time and update 
+// function updateTime () {
+//     $('.time-text').each(function () {
+//         var hourBlock = parseInt($(this).attr('id'))
+
+//         if (hourBlock < currentHour) {
+//             $(this).children('.description').addClass('#past')
+//         } else if (hourBlock)
+//     })
+// }
