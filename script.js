@@ -1,23 +1,33 @@
+$(document).ready(function () { 
 // select the text area 
 let nineamTextArea = document.querySelector('#nineamTextArea')
 let saveTextBtns = document.querySelectorAll('.saveTextBtn')
 // $('#nineamTextArea')
 
-// set an event listener for all the buttons
-// for (i = 0; i < saveTextBtns.length; i++) {
+// grab any value that maybe in local storage
+$('#9 .description').val(localStorage.getItem(9))
+$('#10 .description').val(localStorage.getItem(10))
+$('#11 .description').val(localStorage.getItem(11))
+$('#12 .description').val(localStorage.getItem(12))
+$('#1 .description').val(localStorage.getItem(1))
+$('#2 .description').val(localStorage.getItem(2))
+$('#3 .description').val(localStorage.getItem(3))
+$('#4 .description').val(localStorage.getItem(4))
+$('#5 .description').val(localStorage.getItem(5))
+
     //saveTextBtns.addEventListener("click", function(event) {
         $('.saveTextBtn').on('click', function () {
             console.log("you clicked"); 
             console.log(this)
-            let prevSibling = this.previousElementSibling.value
-            console.log(prevSibling)
-            // figure out which button was clicked use that as key
-            prevSibling       
-        })
-
-        // access the sibling element on the btn clicked and access its textarea text content
-
-                
+            // grab the text value user types
+            var userTask = $(this).siblings('.description').val()
+            // grabs the value of the id
+            var time = $(this).parent().attr('id')
+            //var userTask = this.previousElementSibling.value
+            console.log(userTask)
+            // this sets the user date into local storage with a key of time var
+            localStorage.setItem(time, userTask)                
+        })               
     //});
 //}
 
@@ -42,3 +52,4 @@ let saveTextBtns = document.querySelectorAll('.saveTextBtn')
 // access the data you want from localstorage
 // let userText = JSON.parse(localStorage.getItem('userText'))
 
+})
