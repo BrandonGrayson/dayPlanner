@@ -1,8 +1,4 @@
 $(document).ready(function () { 
-// select the text area 
-let nineamTextArea = document.querySelector('#nineamTextArea')
-let saveTextBtns = document.querySelectorAll('.saveTextBtn')
-// $('#nineamTextArea')
     // set current Hour to a variable
     //var currentHour = moment().hours()
     // create a current day var with a text value
@@ -53,28 +49,8 @@ function checkTime () {
         }
     })
 }
-
-
-
-
-
-// access the text area value and save it to a variable
-// nineamTextArea.value = userText
-
-// Event Listeners for save buttons
-// saveTextBtn.addEventListener('click', saveTextArea)
-// J query add event listener version
-//$('#saveBtn9am').on('click', saveTextArea)
-// function saveTextArea (event) {
-//     // log button clicked
-//     let bns = document.getElementsByTagName("button");
-    
-// }
-
-
 // access the data you want from localstorage
 // let userText = JSON.parse(localStorage.getItem('userText'))
-
 checkTime()
 })
 
