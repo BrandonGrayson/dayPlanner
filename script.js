@@ -1,22 +1,25 @@
 // select the text area 
-
 let nineamTextArea = document.querySelector('#nineamTextArea')
 let saveTextBtns = document.querySelectorAll('.saveTextBtn')
 // $('#nineamTextArea')
 
 // set an event listener for all the buttons
-for (i = 0; i < saveTextBtns.length; i++) {
-    saveTextBtns[i].addEventListener("click", function(event) {
-        console.log("you clicked"); 
-        // this is button that was clicked
-        console.log(event.target)
-        console.log(this)
-        // access the sibling element on the event that was clicked
-        let prevSibling = event.target.previousElementsSibling
-        // $(this).siblings()
-        console.log(prevSibling)
-    });
-}
+// for (i = 0; i < saveTextBtns.length; i++) {
+    //saveTextBtns.addEventListener("click", function(event) {
+        $('.saveTextBtn').on('click', function () {
+            console.log("you clicked"); 
+            console.log(this)
+            let prevSibling = this.previousElementSibling.value
+            console.log(prevSibling)
+            // figure out which button was clicked use that as key
+            prevSibling       
+        })
+
+        // access the sibling element on the btn clicked and access its textarea text content
+
+                
+    //});
+//}
 
 
 
