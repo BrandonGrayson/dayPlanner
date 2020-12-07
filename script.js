@@ -1,17 +1,26 @@
 // select the text area 
+
 let nineamTextArea = document.querySelector('#nineamTextArea')
 let saveTextBtns = document.querySelectorAll('.saveTextBtn')
 // $('#nineamTextArea')
 
 // set an event listener for all the buttons
 for (i = 0; i < saveTextBtns.length; i++) {
-    saveTextBtns[i].addEventListener("click", function() {
+    saveTextBtns[i].addEventListener("click", function(event) {
         console.log("you clicked"); 
-        // target the text area to be saved and grab the text 
-        nineamTextArea.value = userText
-
+        // this is button that was clicked
+        console.log(event.target)
+        console.log(this)
+        // access the sibling element on the event that was clicked
+        let prevSibling = event.target.previousElementsSibling
+        // $(this).siblings()
+        console.log(prevSibling)
     });
 }
+
+
+
+
 
 // access the text area value and save it to a variable
 // nineamTextArea.value = userText
@@ -30,9 +39,3 @@ for (i = 0; i < saveTextBtns.length; i++) {
 // access the data you want from localstorage
 // let userText = JSON.parse(localStorage.getItem('userText'))
 
-// 
-// if (userText) {
-//     console.log('a value was received')
-// } else {
-//     console.log('we did not get a value')
-// }
