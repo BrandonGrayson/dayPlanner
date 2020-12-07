@@ -1,6 +1,6 @@
 // select the text area 
 let nineamTextArea = document.querySelector('#nineamTextArea')
-let saveTextBtn = document.querySelector('.saveTextBtn')
+let saveTextBtn = document.querySelectorAll('.saveTextBtn')
 // $('#nineamTextArea')
 
 // access the data you want from localstorage
@@ -20,10 +20,13 @@ nineamTextArea.value = userText
 saveTextBtn.addEventListener('click', saveTextArea)
 // J query add event listener version
 //$('#saveBtn9am').on('click', saveTextArea)
-
-function saveTextArea () {
+function saveTextArea (event) {
     // log button clicked
-    console.log('button was clicked')
+    let bns = document.getElementsByTagName("button");
+    for (i = 0; i < bns.length; i++) {
+        bns[i].addEventListener("click", function() {
+        console.log("you clicked"); });
+    }
 
 }
 
