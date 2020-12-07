@@ -7,6 +7,9 @@ let saveTextBtns = document.querySelectorAll('.saveTextBtn')
 for (i = 0; i < saveTextBtns.length; i++) {
     saveTextBtns[i].addEventListener("click", function() {
         console.log("you clicked"); 
+        // target the text area to be saved and grab the text 
+        nineamTextArea.value = userText
+
     });
 }
 
