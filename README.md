@@ -15,6 +15,8 @@ if you have something you would like to schedule click the save button to the ri
 
 ### Credit To
 Brandon Grayson
+Email: brandonbgrayson@gmail.com
+phone: 856-434-0321
 
 #### Links 
 https://github.com/BrandonGrayson/dayPlanner
