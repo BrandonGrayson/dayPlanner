@@ -19,3 +19,6 @@ Brandon Grayson
 #### Links 
 https://github.com/BrandonGrayson/dayPlanner
 https://brandongrayson.github.io/dayPlanner/
+
+##### Technologies Used
+JQuery
